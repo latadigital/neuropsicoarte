@@ -1,0 +1,237 @@
+@include component('about') {
+    height: 1%;
+    overflow: hidden;
+    margin-bottom: 40px;
+
+    @include element('image') {
+        float: left;
+        width: 50%;
+        @media(max-width: 992px) {
+            padding: 0px 20px;
+            width: 100%;
+        }
+
+        img {
+            display: block;
+            line-height: 0px;
+            width: 100%;
+        }
+    }
+
+    @include element('info') {
+        float: left;
+        padding-left: 80px;
+        padding-top: 80px;
+        width: 50%;
+        @media(max-width: 1100px) {
+            padding-top: 40px;
+        }
+
+        @media(max-width: 992px) {
+            text-align: center;
+            padding-left: 0px;
+            width: 100%;
+        }        
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 300;
+            color: #000;
+            font-size: 14px;
+            line-height: 22px;
+            width: 70%;
+            @media(max-width: 992px) {
+                display: block;
+                margin: 0px auto;
+                width: 80%;
+            }            
+        }
+    }    
+}
+
+@include component('temas') {
+    background: #f9f9f9;
+    padding: 60px 0px;
+    
+    @include element('title') {
+        text-align: center;
+        color: #333333;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+
+    @include element('bajada') {
+        text-align: center;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 50px;
+        @media(max-width: 610px) {
+            margin: 0px auto 50px;
+            width: 80%;
+        }                       
+    }  
+    
+    @include element('items') {
+        height: 1%;
+        overflow: hidden;
+    }
+
+    @include element('item') {
+        float: left;
+        padding: 0px 50px;
+        margin-bottom: 70px;
+        text-align: center;
+        width: 33.333333%;
+        @media(max-width: 992px) {
+            width: 50%;
+        }
+
+        @media(max-width: 500px) {
+            width: 100%;
+        }        
+
+        figure {
+            display: inline-block;
+            margin-bottom: 30px;
+
+            img {
+                height: 82px;
+                width: 82px;
+            }
+        }
+
+        h3 {
+            font-weight: 300;
+            color: #333333;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-weight: 300;
+            color: #333333;
+            font-size: 14px;
+            margin-bottom: 30px;            
+        }
+
+        a {
+            display: block;
+            line-height: 45px;
+            border: 1px solid #bbbbbb;
+            text-align: center;
+            color: #9f9f9f;
+            width: 125px;
+            transition: all 250ms;
+            margin: 0px auto;
+            &:hover {
+                text-decoration: none;
+                border: 1px solid #f9b231;
+                box-shadow: 4px 6px 5px 0px rgba(203,203,202,1);
+                background: #f9b231;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@include component('newsFeed') {
+    padding: 60px 0px;
+
+    @include element('title') {
+        text-align: center;
+        color: #333333;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+
+    @include element('bajada') {
+        text-align: center;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        margin: 0px auto 50px;
+        max-width: 700px;
+        width: 80%;             
+    }    
+
+    @include element('items') {
+        height: 1%;
+        overflow: hidden;
+    }
+
+    @include element('categoria') {
+        width: 100%;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            height: 54px;
+            margin-right: 10px;
+            width: 54px;
+        }
+
+        p {
+            vertical-align: middle;
+            display: inline-block;
+            padding-top: 12px;
+        }
+    }
+
+    @include element('item') {
+        float: left;
+        padding: 0px 25px 15px;
+        width: 33.3%;
+
+        @media (max-width: 768px){
+            width: 100%;
+        }
+
+        figure {
+            padding: 0px;
+            margin: 0px;
+
+            img {
+                height: auto;
+                display: block;
+                line-height: 0;
+                width: 100%;
+            }
+        }
+
+        .item__wrap {
+            background: #f7f7f7;
+            box-shadow: 3px 7px 5px 0px rgba(228,228,228,1);
+
+            .item__info {
+                padding: 30px 25px;
+            }
+
+            h2 {
+                font-weight: 300;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            span {
+                font-size: 12px;
+                color: #888888;
+                font-weight: 300;
+                display: block;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 300;
+            }
+        }
+    }
+}

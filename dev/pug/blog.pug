@@ -1,0 +1,22 @@
+extends layouts/default.pug
+
+block vars
+    - var pageTitle = 'Blog'
+    - var btnBanner = false
+
+block content
+    .c-bigbanner
+        .c-bigbanner__items
+            .c-bigbanner__item_inner
+                .c-bigbanner__image
+                    img(src="img/bigbanner.jpg", alt="NeuroPsicoarte")
+                .c-bigbanner__info
+                    h1 
+                        strong Lorem ipsum
+                        |  dolor sit amet, consectetur adipiscing elit
+                    if btnBanner
+                        a.c-bigbanner__link(href="single.html") Ver más
+                        
+    include partials/_blog.pug
+
+block append scripts

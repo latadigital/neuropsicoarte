@@ -1,0 +1,153 @@
+@include component('temasSalud') {
+    padding: 70px 60px;
+    @media(max-width: 992px) {
+        padding: 30px 20px;
+    }            
+
+    @include element('bgColor') {
+        background:#f8f8f8;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 450px;
+        top: 50%;
+        transform: translateY(-50%);
+        @media(max-width: 992px) {
+            background: none;
+        }                
+    }
+
+    @include element('content') {
+        width: 100%;
+        margin-bottom: 30px;
+        @media(max-width: 992px) {
+            background: none;
+        }        
+    }    
+    
+    @include element('list') {
+        float: left;
+        width: 30%;
+        @media(max-width: 992px) {
+            width: 100%;
+        }        
+
+        ul {
+            li {
+                position: relative;
+
+                a {
+                    display: block;
+                    height: 67px;                    
+                    line-height: 67px;
+                    background: #8bc1d9;
+                    width: 100%;
+                    color: #fff;
+                    font-size: 16px;
+                    padding-left: 15px;
+                    max-width: 290px;
+                    @media(max-width: 992px) {
+                        max-width: 100%;
+                    }                    
+                }
+
+                &:nth-of-type(1) {
+                    z-index: 10;
+                }
+
+                &:nth-of-type(2) {
+                    z-index: 9;
+                    a {
+                        background: #ff8500;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    z-index: 8;
+                    a {
+                        background: #4f7ec2;
+                    }
+                }
+            }
+        }
+    }
+
+    @include element('info') {
+        float: left;
+        padding: 50px 20px 0px;
+        position: relative;
+        width: 70%;
+        @media(max-width: 992px) {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 25px;
+            color: #333333;
+            text-align: justify;
+        }
+
+        a {
+            display: block;
+            background: #009cde;
+            height: 45px;
+            text-align: center;
+            color: #fff;
+            line-height: 45px;
+            width: 145px;
+        }
+    }
+}
+
+@include component('faq') {
+    padding: 50px 0px;
+
+    h1 {
+        font-size: 25px;
+        color: #333333;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    @include element('item') {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #d2d2d2;
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: 18px;
+            color: #333333;
+            font-weight: 300;
+            margin-bottom: 25px;            
+        }
+
+        p {
+            color: #333333;
+            font-weight: 300;            
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */

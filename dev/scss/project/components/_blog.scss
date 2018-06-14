@@ -1,0 +1,62 @@
+@include component('blog') {
+    @include element('articles') {
+        column-count: 3;
+        column-gap: 1em;
+        @media(max-width: 992px) {
+            column-count: 2;
+        }
+
+        @media(max-width: 500px) {
+            column-count: 1;
+        }        
+    }
+
+    @include element('artContent') {
+        padding: 0px 20px 30px;
+    }
+
+    @include element('article') {
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 20px;
+        background-color: #fff;
+        box-shadow: 2px 2px 4px 0 #f0f0f0;
+
+        figure {
+            margin: 0px 0px 40px;
+            padding: 0px;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        small {
+            font-size: 15px;
+            color: #bbbbbb;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 20px;
+            color: #333333;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        a {
+            font-weight: 700;
+            text-decoration: underline;
+            color: #333333;
+        }
+    }
+}

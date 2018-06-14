@@ -1,0 +1,310 @@
+@include component('planDscto') {
+    @include element('boxes') {
+        height: 1%;
+        overflow: hidden;
+    }
+
+    @include element('box') {
+        float: left;
+        width: 50%;
+        &:nth-of-type(1) {
+            padding: 0px 30px;
+        }
+
+        @media(max-width: 992px) {
+            padding: 0px 20px 20px;
+            width: 100%;
+        }  
+        
+        img {
+            width: 100%;
+        }
+    }
+    @include element('box-100') {
+        float: left;
+        width: 100%;
+        &:nth-of-type(1) {
+            padding: 0px 30px;
+        }
+
+        @media(max-width: 992px) {
+            padding: 0px 20px 20px;
+            width: 100%;
+        }  
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    @include element('item') {
+        border-bottom: 1px solid #a0a0a0;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        &:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 300;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+            color: #333333;
+            margin-bottom: 10px;
+        } 
+        
+        ul {
+            li {
+                line-height: 30px;
+            }
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .mb30 {
+            margin-bottom: 30px;
+        } 
+    }
+
+    @include element('orange') {
+        background: #f9b231;
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-weight: 300;
+            font-size: 25px;
+            line-height: 70px;
+        }
+    }
+
+    @include element('filters') {
+        padding: 50px 0px 20px;
+        @media(max-width: 992px) {
+            max-width: 700px;
+            margin: 0px auto;
+        }         
+
+        form {
+            text-align: center;
+
+            .input {
+                display: inline-block;
+                margin-bottom: 15px;
+                padding: 0px 5px;
+                width: 33%;
+                @media(max-width: 992px) {
+                    width: 100%;
+                }                
+
+                select {
+                    height: 43px;
+                    border: 1px solid #d2d2d2;
+                    outline: none;
+                    background: none;
+                    -webkit-border-radius: 0px !important;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+   @include element('productos') {
+       height: 1%;
+       overflow: hidden;
+       padding-bottom: 50px;
+   }
+
+   @include element('producto') {
+       float: left;
+       width: 33.3%;
+        @media(max-width: 992px) {
+            margin-bottom: 20px;
+            width: 50%;
+        }         
+        
+        @media(max-width: 700px) {
+            width: 100%;
+        }                 
+
+       figure {
+           margin: 0px 0px 20px;
+           padding: 0px;
+           text-align: center;
+           width: 100%;
+           img {
+               height: auto;
+               display: inline-block;
+               max-width: 100%;
+           }
+       }
+
+       .text-inner {
+           margin: 0px auto;
+           max-width: 170px;
+           width: 100%;
+       }
+
+       h2 {
+           color: #009cde;
+           margin-bottom: 5px;
+           font-size: 22px;
+       }
+
+        small {
+            color: #888888;
+            margin-bottom: 5px;
+            display: block;
+            font-size: 12px;
+        }
+        
+        span {
+            font-size: 13px;
+            color: #333333;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #e00109;
+            font-weight: 700;
+        }
+   }
+}
+
+@include component('farmaciasLogos') {
+    background: #f8f8f8;
+    padding: 60px 0px;
+    text-align: center;
+
+    h1 {
+        color: #333333;
+        font-weight: 300;
+        font-size: 20px;
+        margin-bottom: 20px;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    ul {
+        li {
+            display: inline-block;
+            margin-left: 35px;
+        }
+    }
+}
+
+@include component('buscador') {
+    height: 1%;
+    overflow: hidden;
+    background: #0078bc;
+    padding: 70px 0px;
+
+    @include element('box') {
+        float: left;
+        width: 50%;
+        @media(max-width: 992px) {
+            margin-bottom: 40px;
+            width: 100%;
+        }         
+
+        h1 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 25px;
+            max-width: 290px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+
+        form {
+            width: 100%;
+
+            .input {
+                width: 100%;
+
+                input {
+                    height: 40px;
+                    width: 100%;
+                    background: none;
+                    border-radius: 10px;
+                    color: #fff;
+                    border: 1px solid #d2d2d2;
+                    padding: 0px 20px;
+
+                    &::-webkit-input-placeholder {
+                        color: #fff;
+                    }
+                    &::-moz-placeholder {
+                        color: #fff;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #fff;
+                    }
+                    &:-moz-placeholder {
+                        color: #fff;
+                    }                    
+                }
+            }
+
+            .submit {
+                padding-top: 10px;
+                text-align: right;
+
+                input {
+                    background: #fff;
+                    height: 40px;
+                    display: inline-block;
+                    color: #228ac5;
+                    width: 100px;
+                    border: 1px solid #fff;
+                    transition: all 250ms;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        @include modifier('pR100') {
+            padding-right: 100px;
+            @media(max-width: 992px) {
+                padding-right: 0px;
+            }                     
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@include component('header') {
+	@include element('top') {
+		background: #434343;
+		height: 1%;	
+		overflow: hidden;
+	}
+
+	@include element('btn') {
+		color: #fff;
+		line-height: 43px;
+		padding: 0px 15px;
+		@media(max-width: 700px) {
+			text-align: center;
+			width: 100%;
+		}		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	@include element('top-nav') {
+		@media(max-width: 700px) {
+			float: initial !important;
+		}
+
+		ul {
+			li {
+				display: inline-block;
+				@media(max-width: 700px) {
+					text-align: center;
+					width: 100%;
+				}
+
+				a {
+					color: #fff;
+					padding: 0px 25px;
+					line-height: 43px;
+					&:hover {
+						text-decoration: none;
+					}					
+				}
+			}
+		}
+	}
+
+	@include element('main') {
+		padding: 15px;
+	}
+
+	@include element('brand-image') {
+		max-width: 185px;
+		display: inline-block;
+		line-height: 0px;
+	}
+
+	@include element('brand') {
+		float: left;
+		margin-right: 20px;
+	}
+
+	@include element('nav') {
+		float: left;
+		@media(max-width: 992px) {
+			display: none;
+		}
+
+		ul {
+			li {
+				display: inline-block;
+				a {
+					padding: 0px 25px;
+					line-height: 60px;
+					color: #000;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}	
+
+	@include element('search') {
+		float: right;
+		@media(max-width: 1150px) {
+			display: none;
+		}
+
+		form {
+			fieldset {
+				border: none;
+				padding: 0px;
+
+				.input {
+					margin: 15px 0px;
+
+					input {
+						border: 1px solid #bbbbbb;
+						height: 30px;
+						border-radius: 30px;
+						padding: 0px 20px;
+						outline: none;
+						width: 200px;
+					}
+				}
+			}
+		}
+	}		
+}
+
+// Componente inner
+@include component('inner') {
+	max-width: 1280px;
+	margin: 0px auto;
+	height: 1%;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	@include modifier('pd20') {
+		padding: 0px 20px;
+	}
+
+	@include modifier('pd70') {
+		padding: 0px 70px;
+	}	
+}
